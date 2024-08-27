@@ -1,17 +1,14 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Header } from '@/components/header'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Header } from "@/components/header";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Daly Games - Descrubra jogos incríveis para se divertir.',
-  description: 'Mais de 10 mil jogos separados e organizados.',
-  keywords: ['games', 'jogos', 'steam'],
-  openGraph: {
-    images: [`${process.env.PROJECT_URL}/preview.png`]
-  },
+  title: "Daly Games - Descrubra jogos incríveis para se divertir.",
+  description: "Mais de 10 mil jogos separados e organizados.",
+  keywords: ["games", "jogos", "steam"],
   robots: {
     index: true,
     follow: true,
@@ -20,14 +17,14 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       noimageindex: true,
-    }
-  }
-}
+    },
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -36,5 +33,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
